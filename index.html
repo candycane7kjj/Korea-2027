@@ -20,7 +20,16 @@ main{max-width:820px;margin:auto;padding:0 15px 55px}.hero{height:360px;margin:0
 .hotel h3{margin:0;font-size:17px;line-height:1.35}
 .hotel h3 a{color:var(--dark);text-decoration:none}
 .hotel h3 a:hover{text-decoration:underline}
-/* Day 2 / Day 3: clean stacked rows without a left-hand timeline */
+/* Day 2 / Day 3: separate cards for each area */
+.place-group{margin-top:14px;padding:15px 15px 5px;background:#ffffffd9;border:1px solid #f0d5df;border-radius:20px;box-shadow:0 6px 18px #be69840d}
+.place-group:first-of-type{margin-top:18px}
+.place-group-title{font-size:14px;font-weight:950;color:#b85e7b;padding-bottom:9px;border-bottom:1px solid #f5e3e9;line-height:1.4}
+.place-group .events{margin-top:7px}
+.place-group .event{border-top:1px dashed #f0dce3;padding:10px 0}
+.place-group .event:first-child{border-top:0;padding-top:7px}
+.place-group .time{display:inline-flex;width:max-content;max-width:100%;margin:0 0 4px;padding:3px 8px;border-radius:7px;background:#fff0f4;color:#a95773;font-size:10px;line-height:1.35;font-weight:900;white-space:normal}
+.place-group .detail{font-size:13px;line-height:1.65}
+/* No timeline column on grouped days */
 .day-card.no-time .event{grid-template-columns:minmax(0,1fr);gap:4px;padding:11px 0}
 .day-card.no-time .time{display:inline-flex;width:max-content;max-width:100%;margin:0 0 4px;padding:3px 8px;border-radius:7px;background:#fff0f4;color:#a95773;font-size:10px;line-height:1.35;font-weight:900;white-space:normal}
 .day-card.no-time .detail{font-size:13px;line-height:1.65}
@@ -74,32 +83,39 @@ const D=[
 ["宵夜","🍕 <a href=\"https://xhslink.cn/o/6GA6tedjclG\" target=\"_blank\">No More 披萨外卖</a>"],
 ["","🍗 <a href=\"https://xhslink.cn/o/4okGoS5R8iW\" target=\"_blank\">传统炸鸡</a>"]
 ]},
-{date:"DAY 2 · 4.2",week:"周五 · 首尔林 · 圣水洞 · 石村湖夜樱",title:"🌸 首尔林赏樱 · 圣水洞逛吃 · 石村湖夜樱",items:[
+{date:"DAY 2 · 4.2",week:"周五 · 首尔林 · 圣水洞 · 石村湖夜樱",title:"🌸 首尔林赏樱 · 圣水洞逛吃 · 石村湖夜樱",groups:[
+["🌸 首尔林 · 赏樱",[
 ["上午","🌸 首尔林赏樱｜首尔林站 서울숲역，参考 11 号口"],
-["出发交通 · 二选一","<span class=\"transit-option\"><b>方案 A｜地铁</b>🚇 6 号线：东庙前站（동묘앞）→ 新堂站（신당），往新内方向 1 站；换乘 2 号线，往汉阳大学方向至纛岛站（뚝섬），4 站。</span><span class=\"transit-option\"><b>方案 B｜公交</b>🚌 打开 Naver Map 查看实时路线；需换乘 1 次，步行较少。</span>"],
-["赏樱后","🚶 首尔林步行前往圣水洞，按当天所在出口和店铺定位导航"],
+["交通","<span class=\"transit-option\"><b>方案 A｜地铁</b>🚇 6 号线：东庙前站（동묘앞）→ 新堂站（신당），往新内方向 1 站；换乘 2 号线，往汉阳大学方向至纛岛站（뚝섬），4 站。</span><span class=\"transit-option\"><b>方案 B｜公交</b>🚌 打开 Naver Map 查看实时路线；需换乘 1 次，步行较少。</span>"],
+["之后","🚶 首尔林步行前往圣水洞，按当天所在出口和店铺定位导航"]
+]],
+["🛍️ 圣水洞 · 逛吃购物",[
 ["甜品","🍰 <a href=\"https://xhslink.cn/o/2WYvTqTmEl1\" target=\"_blank\">터틀힙 성수蛋糕</a><br><span class=&quot;hours&quot;>营业时间 11:00–20:30</span>"],
 ["午餐","🐮 <a href=\"https://xhslink.cn/o/2udgPQ4jMLg\" target=\"_blank\">실비옥 海带牛肉汤</a><br><span class=&quot;hours&quot;>营业时间 11:00–22:40</span><span class=&quot;hours-note&quot;>🚶 首尔林步行约 1.4 公里 · 工作日 15:00–17:00 休息，周末不休息</span>"],
 ["逛街","🛍️ <a href=\"http://xhslink.cn/o/4x2nmSBGrdK\" target=\"_blank\">Torriden 快闪</a>"],
 ["12 / 14 / 16点","🍦 <a href=\"http://xhslink.cn/o/9RUPVgMhqVk\" target=\"_blank\">Gelato 冰淇淋</a><br><span class=&quot;hours&quot;>迪拜巧克力味供应：12:00 / 14:00 / 16:00</span>"],
 ["","🍫 <a href=\"http://xhslink.cn/o/62fgu6tjTe3\" target=\"_blank\">AMA 巧克力</a>"],
-["13:00","🐷 <a href=\"http://xhslink.cn/o/6dQuhp7NgGp\" target=\"_blank\">猪蹄 gwonsik</a><br><span class=&quot;hours&quot;>营业时间：13:00 开始</span>"],
-["15:00","🍖 <a href=\"http://xhslink.cn/o/2awDmX94gq7\" target=\"_blank\">Ggupdang 烤肉</a><br><span class=&quot;hours&quot;>营业时间：15:00 开始</span><span class=&quot;hours-note&quot;>可通过小程序线上排号</span>"],
+["13:00 开始","🐷 <a href=\"http://xhslink.cn/o/6dQuhp7NgGp\" target=\"_blank\">猪蹄 gwonsik</a><br><span class=&quot;hours&quot;>营业时间：13:00 开始</span>"],
+["15:00 开始","🍖 <a href=\"http://xhslink.cn/o/2awDmX94gq7\" target=\"_blank\">Ggupdang 烤肉</a><br><span class=&quot;hours&quot;>营业时间：15:00 开始</span><span class=&quot;hours-note&quot;>可通过小程序线上排号</span>"],
 ["","🐰 <a href=\"https://xhslink.cn/o/63YyEdJgpYa\" target=\"_blank\">首尔米菲</a>"],
 ["","🍞 <a href=\"http://xhslink.cn/o/7AgvjC4ZkZl\" target=\"_blank\">Beton 盐面包</a>"],
-["","🥯 <a href=\"https://xhslink.cn/o/AVR4v8766I1\" target=\"_blank\">HAZ BAKERY</a><br><span class=\"hours\">营业时间 10:30–20:30</span>"],
-["","🍑 <a href=\"http://xhslink.cn/o/76mWFMzfswu\" target=\"_blank\">kuoca 桃子</a>"],
+["","🥯 <a href=\"https://xhslink.cn/o/AVR4v8766I1\" target=\"_blank\">HAZ BAKERY</a><br><span class=&quot;hours&quot;>营业时间 10:30–20:30</span>"],
+["","🍑 <a href=\"http://xhslink.cn/o/76mWFMzfswu\" target=\"_blank\">kuoca 桃子</a>"]
+]],
+["🌙 石村湖 · 夜樱",[
 ["晚上","🌸 <a href=\"https://xhslink.cn/o/9qq6GROJ2y0\" target=\"_blank\">石村湖夜樱</a>"],
-["📍","Seokchonlake (Dongho Lake) · 32 Sincheon-dong Songpa-gu Seoul"]
+["📍 地址","Seokchonlake (Dongho Lake) · 32 Sincheon-dong Songpa-gu Seoul"]
+]]
 ]},
-{date:"DAY 3 · 4.3",week:"周六 · 南山 · 弘大 · 汉江夜樱",title:"🌸 南山赏樱 · 弘大 · 汉江",items:[
-["上午","🌸 南山塔 → 从南山图书馆下公交车，沿南山步道赏樱","https://xhslink.cn/o/rtcOElNh4b"],
-["下午","🏫 弘大赏樱 + 吃甜品"],["","🚇 地铁弘大 3 号出口"],["","🍧 甜品","http://xhslink.com/o/78UCuwm5Mlj"],["","🎨 手绘人生四宫格","http://xhslink.com/o/9101TT2pwTJ"],["","🍖 风川鳗鱼","https://xhslink.cn/o/59ky1StoW2H"],["","🥩 金德厚烤牛肠","https://xhslink.cn/o/9qB0vPbGs1e"],
-["晚上","🌃 去汉江 · 汝矣岛渡口站 2 号口","https://xhslink.cn/o/AuJvEN15KZX"],["","🌸 沿汉江公园赏樱花夜景｜여의나루역"],["","🍜 汉江边泡面","https://xhslink.cn/o/1ki1JjiXCZy"]]},
+{date:"DAY 3 · 4.3",week:"周六 · 南山 · 弘大 · 汉江夜樱",title:"🌸 南山赏樱 · 弘大 · 汉江",groups:[
+["🌸 南山 · 山路赏樱",[["上午","🌸 南山塔 → 从南山图书馆下公交车，沿南山步道赏樱","https://xhslink.cn/o/rtcOElNh4b"]]],
+["🎨 弘大 · 逛街吃甜品",[["下午","🏫 弘大赏樱 + 吃甜品"],["交通","🚇 地铁弘大 3 号出口"],["甜品","🍧 甜品","http://xhslink.com/o/78UCuwm5Mlj"],["体验","🎨 手绘人生四宫格","http://xhslink.com/o/9101TT2pwTJ"],["吃饭","🍖 风川鳗鱼","https://xhslink.cn/o/59ky1StoW2H"],["吃饭","🥩 金德厚烤牛肠","https://xhslink.cn/o/9qB0vPbGs1e"]]],
+["🌃 汉江 · 夜樱",[["晚上","🌃 去汉江 · 汝矣岛渡口站 2 号口","https://xhslink.cn/o/AuJvEN15KZX"],["散步","🌸 沿汉江公园赏樱花夜景｜여의나루역"],["宵夜","🍜 汉江边泡面","https://xhslink.cn/o/1ki1JjiXCZy"]]]
+]},
 {date:"DAY 4 · 4.4",week:"周日 · 机动选择日",title:"🎡 Plan A / B / C",plans:[
 ["PLAN A · 🎠 乐天世界游乐园",[["全天","🎠 乐天世界游乐园"]]],
 ["PLAN B · ⛩️ 景福宫",[["白天","⛩️ 景福宫"]]],
-["PLAN C · 🛍️ 汉南洞 + 明洞",[["白天","🛍️ 汉南洞","https://xhslink.cn/o/o5oQgvmjnD"],["下午 / 晚上","🛍️ 明洞"]]],
+["PLAN C · 🛍️ 汉南洞 + 明洞",[["白天","🛍️ 汉南洞","https://xhslink.cn/o/o5oQgvmjnD"],["下午","🛍️ 明洞"],["晚上","🌙 清溪川夜景散步"]]],
 ["懒人方案 · 🛍️ 酒店附近 DUNDUN",[["随时","🛍️ DUNDUN 购物 + 吃饭","https://xhslink.cn/o/9uLdNK1ahhw"]]]
 ]},
 {date:"DAY 5 · 4.5",week:"周一 · 机动日 · 回程",title:"🛍️ 机动日 · 选择安排",plans:[
@@ -111,5 +127,5 @@ const D=[
 const tabs=document.getElementById("tabs");
 D.forEach((d,i)=>{let b=document.createElement("button");b.className="daytab";b.textContent=d.date;b.onclick=()=>show(i);tabs.appendChild(b)});
 function item(x){return '<div class="event '+(x[3]?'done':'')+'"><div class="time">'+(x[0]||"")+'</div><div class="detail">'+(x[3]?'☑️ ':'')+x[1]+(x[2]?' <a href="'+x[2]+'" target="_blank">↗</a>':'')+'</div></div>'}
-function show(i){document.querySelectorAll(".daytab").forEach((b,j)=>b.classList.toggle("active",i===j));let d=D[i],body=d.plans?d.plans.map(p=>'<div class="plan"><div class="plan-title">'+p[0]+'</div><div class="events">'+p[1].map(item).join("")+'</div></div>').join(""):'<div class="events">'+d.items.map(item).join("")+'</div>';let cleanLayout=(i===1||i===2)?' no-time':'';document.getElementById("day").innerHTML='<div class="day-card'+cleanLayout+'"><div class="meta">'+d.date+'</div><div class="week">'+d.week+'</div><div class="title">'+d.title+'</div>'+body+'</div>'}show(0);
+function show(i){document.querySelectorAll(".daytab").forEach((b,j)=>b.classList.toggle("active",i===j));let d=D[i],body=d.plans?d.plans.map(p=>'<div class="plan"><div class="plan-title">'+p[0]+'</div><div class="events">'+p[1].map(item).join("")+'</div></div>').join(""):d.groups?d.groups.map(g=>'<div class="place-group"><div class="place-group-title">'+g[0]+'</div><div class="events">'+g[1].map(item).join("")+'</div></div>').join(""):'<div class="events">'+d.items.map(item).join("")+'</div>';let cleanLayout=(i===1||i===2)?' no-time':'';document.getElementById("day").innerHTML='<div class="day-card'+cleanLayout+'"><div class="meta">'+d.date+'</div><div class="week">'+d.week+'</div><div class="title">'+d.title+'</div>'+body+'</div>'}show(0);
 </script></body></html>
